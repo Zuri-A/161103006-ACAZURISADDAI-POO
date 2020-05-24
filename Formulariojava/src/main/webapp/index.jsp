@@ -10,10 +10,10 @@
         <p>Este es mi primer formurio en donde conocere  la diferncia entre POST<b> y GET</b>  </p>
         <form method="POST">
             
-        <input type="text" name="minombre"/><br><br>
-        <input type="password" name="contra"/><br><br>
-        <input type="date" name="fechanacimiento"/><br><br>
-        <input type="submit" name="Enviar"/><br><br>
+            <input type="text" name="minombre"/><br><br>
+            <input type="password" name="contra"/><br><br>
+            <input type="date" name="fechanacimiento"/><br><br>
+            <input type="submit" name="Enviar"/><br><br>
         
         </form>
         <h1> Los datos ingresados son: </h1>
