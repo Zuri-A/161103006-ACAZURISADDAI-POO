@@ -16,11 +16,11 @@
             for (int i = 0; i < numero; i++) {
                 out.println(i);
             }
-            out.println("\n"+numero);
+            out.println(numero);
         %>
         <form>
             <input type="hidden" value="Prueba "/>
-            <input type="submit" value="Regresar"/>
+            <input type="submit" name="Regresar"/>
         </form>
         <%
         } else if (request.getParameter("numero") == "hidden") {%>

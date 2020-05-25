@@ -1,18 +1,13 @@
-<%-- 
-    Document   : inedex
-    Created on : 22/05/2020, 14:48:08
-    Author     : airam
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Operaciones aritmeticas</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Operaciones aritmeticas </h1>
+        <p> Ingrese dos numeros:</p>
         <form>
             <input required="required" type="number" name="uno"/><br><br>
             <input required="required" type="number" name="dos"/><br><br>
