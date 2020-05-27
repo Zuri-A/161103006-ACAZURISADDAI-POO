@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Reproducir/Pausa</button> 
+  <button onclick="makeBig()">Grande</button>
+  <button onclick="makeSmall()">Pequeño</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Su navegador no admite video HTML.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.Reproducir(); 
+  else 
+    myVideo.Pausa(); 
+} 
+
+function makeBig() { 
+    myVideo.ancho = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.ancho = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.ancho = 420; 
+} 
+</script> 
+
+<p>Video cortesia de <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body> 
+</html>

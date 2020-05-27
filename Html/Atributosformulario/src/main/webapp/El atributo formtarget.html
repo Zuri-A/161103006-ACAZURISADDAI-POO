@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>El atributo de objetivo de formulario de entrada</h1>
+
+<p>El atributo formtarget especifica un nonbre o una palabra clave que indica donde mostrar la respuesta que se recibe despues de enviar el formulario.</p>
+
+<form action="/action_page.php">
+  <label for="fname">Nombre:</label>
+  <input type="text" id="fname" name="fname"/><br><br>
+  <label for="lname">Apellido:</label>
+  <input type="text" id="lname" name="lname"/><br><br>
+  <input type="submit" value="Enviar"/>
+  <input type="submit" formtarget="_blank" value="Enviar a una nueva ventana/pestaña"/>
+</form>
+
+</body>
+</html>

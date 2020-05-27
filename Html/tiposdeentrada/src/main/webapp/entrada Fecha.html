@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>Campo de fecha</h2>
+
+        <p>El<strong>tipo de entrada = "fecha"</strong> se usa para los campos de entrada que deben contener una fecha.</p>
+
+        <form action="/action_page.php">
+            <label for="birthday">Cumpleaños:</label>
+            <input type="date" id="birthday" name="birthday">
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><strong>Nota:</strong> type = "date" no es compatible con Safari o Internet Explorer 11 (o anterior).</p>
+
+
+
+        <h2>Restricciones de campo de fecha</h2>
+
+        <p>Use los atributos min y max para agregar restricciones a las fechas:</p>
+
+        <form action="/action_page.php">
+            <label for="datemax">Ingrese una fecha antes de 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+            <label for="datemin">Ingrese una fecha posterior al 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><strong>Note:</strong> type = "date" no es compatible con Safari o Internet Explorer 11 (o anterior).</p>
+
+    </body>
+</html>

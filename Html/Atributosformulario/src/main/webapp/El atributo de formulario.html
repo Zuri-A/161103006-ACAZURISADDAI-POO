@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>El atributo de formulario de entrada</h1>
+
+<p>El atributo de formulario especifica el formulario al que pertenece un elemento de entrada.</p>
+
+<form action="/action_page.php" id="form1">
+  <label for="fname">First Nombre:</label>
+  <input tipo="texto" ID="fname" nombre="fname"/><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>El campo "Apellido" a continuacion esta fuera del elemento de formulario, pero sigue siendo psrte del formulario.</p>
+
+<label for="lname">Apellido:</label>
+<input type="text" id="lname" name="lname" form="form1">
+
+</body>
+</html>

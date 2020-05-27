@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>Mostrar un control de entrada de tiempo</h1>
+
+        <p>El <strong> tipo de entrada = "hora"</strong> permite al usuario seleccionar una hora (sin zona horaria):</p>
+
+        <p>Si el navegador lo admite, aparece un selector de tiempo al ingresar al campo de entrada.</p>
+
+        <form action="/action_page.php">
+            <label for="appt">Selecciona una hora:</label>
+            <input type="time" id="appt" name="appt">
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><strong>Nota:</strong> type = "time" no es compatible con Safari o Internet Explorer 12 (o versiones anteriores).</p>
+
+    </body>
+</html>

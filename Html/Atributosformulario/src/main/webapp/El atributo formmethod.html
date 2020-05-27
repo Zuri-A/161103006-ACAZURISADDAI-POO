@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>El atributo del metodo de formulario de entrada</h1>
+
+<p>El atrabuto de formmethod define el metodo HTTP para enviar datos de formulario a la URL de accion.</p>
+
+<form action="/action_page.php" method="get" target="_blank">
+  <label for="fname">Nombre:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Apellido:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Enviar uasando GET">
+  <input type="submit" formmethod="post" value="Enviar usando POST">
+</form>
+
+</body>
+</html>
+

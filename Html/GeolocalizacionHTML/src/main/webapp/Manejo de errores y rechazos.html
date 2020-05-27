@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Haga clic en el boton para obtener sus coordenadas.</p>
+
+<button onclick="getLocation()">Pruebelo</button>
+
+<p id="demo"></p>
+
+<script>
+var x = documento.getElementById("demo");
+
+function getLocation() {
+  if (navegador.geolocalizacion) {
+    navigator.geolocalizacion.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "La geolocalizacion no es compatiple con este navegador.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitud: " + posicion.coords.latitud + 
+  "<br>Longitud: " + posicion.coords.longitud;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISO_DENEGADO:
+      x.innerHTML = "El usuario rechazo la solicitud de geolocalizacion."
+      break;
+    case error.POSICION_NO DISPONIBLE:
+      x.innerHTML = "La ubicacion de ubicacion no esta disponible."
+      break;
+    case error.TIEMPO DE ESPERA:
+      x.innerHTML = "La solicidud para obtener la ubicacion del usuario ha excedido el tiempo de espera."
+                  break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "Se produjo un error desconocido."
+      break;
+  }
+}
+</script>
+
+</body>
+</html>
+

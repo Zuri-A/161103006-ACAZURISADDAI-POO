@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+    <head>
+        <title>Imagenes HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+         <h1>Mapas de imagen HTML</h1><br>
+        <h2><em>Mapas de imagen</em></h2>
+        <img src="img/flor.jpg" alt="Workplace" usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+        
+         <h2><em>La imagen</em></h2>
+         <img src="img/flor.jpg" alt="Workplace" usemap="#workmap">
+         
+         <h2><em>  El mapa</em></h2>
+         <map name="workmap"></map>
+         
+        
+         
+         <h2><em>Coordenadas</em></h2>
+        
+         <img src="img/flor.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+         <map name="workmap">
+             <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+         </map>
+         
+          <h2><em>Mapa de imagen y JavaScript</em></h2>
+         <p>Click on the cup of coffee to execute a JavaScript function:</p>
+
+         <img src="img/flor.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+         <map name="workmap">
+             <area shape="circle" coords="337,300,44" onclick="myFunction()">
+         </map>
+
+         <script>
+         function myFunction() {
+           alert("You clicked the coffee cup!");
+         }
+         </script>
+
+        
+    </body>
+</html>

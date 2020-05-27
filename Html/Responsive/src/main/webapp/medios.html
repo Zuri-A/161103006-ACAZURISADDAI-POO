@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color:#f1f1f1;
+  padding:20px;
+  float:left;
+  width:60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Preguntas de los medios</h2>
+<p>Cambiar el tamaño de la ventana del navegador.</p>
+
+<p>Asegúrese de alcanzar el punto de interrupción a 800 px al cambiar el tamaño de este marco.</p>
+
+<div class="left">
+  <p>Menú izquierdo</p>
+</div>
+
+<div class="main">
+  <p>Contenido principal</p>
+</div>
+
+<div class="right">
+  <p>Contenido derecho</p>
+</div>
+
+</body>
+</html>

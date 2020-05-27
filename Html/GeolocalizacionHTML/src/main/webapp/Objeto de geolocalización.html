@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Haga clic en el boton para obtener sus coordenadas.</p>
+
+<button onclick="getLocation()">Pruebelo</button>
+
+<p id="demo"></p>
+
+<script>
+var x = documento.getElementById("demo");
+
+function getLocation() {
+  if (navigador.geolocalizacion) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "La geolocalizacion no es compatible con este navegador.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitud: " + posicion.coords.latitud + 
+    "<br>Longitud: " + posicion.coords.longitud;
+}
+</script>
+
+</body>
+</html>

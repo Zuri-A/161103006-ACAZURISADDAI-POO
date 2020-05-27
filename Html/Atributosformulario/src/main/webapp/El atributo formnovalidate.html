@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>El atributo formnovalidate de entrada</h1>
+
+<form action="/action_page.php">
+  <label for="email">Ingrese su correo electronico:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validacion">
+</form>
+
+<p><strong>Nota:</strong> El atributo formnovalidate de la etiqueta de entrada no es compatible con Safari 10 (o anterior).</p>
+
+</body>
+</html>

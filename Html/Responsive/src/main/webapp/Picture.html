@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h2>Mostrar diferentes imágenes dependiendo del ancho del navegador</h2>
+        <p>Cambie el tamaño del ancho del navegador y la imagen cambiará a 600 px y 1500 px.</p>
+
+    <picture>
+        <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+        <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+        <source srcset="flowers.jpg">
+        <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+    </picture>
+
+</body>
+</html>

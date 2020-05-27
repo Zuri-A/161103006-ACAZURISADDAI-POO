@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <style>
+        .cities {
+             background-color: black;
+             color: white;
+             margin: 20px;
+             padding: 20px;
+                }
+             
+                span.note {
+                    font-size: 120%;
+                    color: red;
+                }  
+                
+                .city {
+                    background-color: tomato;
+                    color: white;
+                    padding: 10px;
+                }
+                
+        </style>
+        
+    </head>
+    <body>
+        
+        <h1>HTML El atributo de clase</h1><br>
+       
+        <h2><em>Atributos de clase</em></h2>
+        <div class="cities">
+            <h2>Londres</h2>
+            <p>Londres es la capital de Inglaterra</p>
+        </div>
+
+        <div class="cities">
+            <h2>Paris</h2>
+            <p>Paris es la capital de Francia</p>
+        </div>
+
+        <div class="cities">
+            <h2>Tokyo</h2>
+            <p>Tokyo es la capital de Japon</p>
+        </div>
+        <br>
+        
+         <h2><em>Uso del atributo de clase en elementos en línea</em></h2>
+        <h2>Mi Titulo <span class="note"> Importante</span></h2>
+        <p>Este es otro titulo <span class="note"> importante</span></p>
+         <br>
+        
+        
+        <h2><em>Seleccionar elementos con una clase específica</em></h2>
+        <h2 class="city">Londres</h2>
+        <p>Londres es la capital de Inglaterra</p>
+
+        <h2 class="city">Paris</h2>
+        <p>Paris es la capital de Francia</p>
+
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo es la capital de Japon</p>
+       
+        <br>
+        
+        
+        <h2><em>Clases Múltiples</em></h2>
+        <h2 class="city main">Londres</h2>
+        <h2 class="city">Paris</h2>
+        <h2 class="city">Tokyo</h2>
+         <br>
+        
+        
+       
+        <h2><em>Diferentes etiquetas pueden compartir la misma clase</em></h2>
+        <h2 class="city">Paris</h2>
+        <p class="city">Paris es la capital de Francia</p>
+         <br>
+        
+         <button onclick="myFunction()">Ocultar Elementos</button>
+        
+       <!--- <h2><em>Usando el atributo de clase en JavaScript</em></h2>--->
+         <div> 
+        <script>
+            function myFunction() {
+            var x = document.getElementsByClassName("city");
+             for (var i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+                 }
+                }
+          </script>
+         </div>
+
+        
+       
+    </body>
+</html>

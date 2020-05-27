@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+<body>
+
+<p><button onclick="clickCounter()" type="button">¡Haz click en mi!</button></p>
+<div id="result"></div>
+<p>Haga clic en el botón para ver el aumento del contador.</p>
+<p>Cierre la pestaña (o ventana) del navegador e intente nuevamente, y el contador continuará contando (no se restablece).</p>
+
+</body>
+</html>
+
