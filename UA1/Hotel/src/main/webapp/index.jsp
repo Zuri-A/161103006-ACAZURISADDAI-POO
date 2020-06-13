@@ -8,11 +8,13 @@
 
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost/hotel", "root", "");
+        conexion = DriverManager.getConnection("jdbc:mysql://localhost/hoteles", "root", "");
         stmt = conexion.createStatement();
 
-    } catch (Exception e) {
-        out.println("error" + e);
+    } catch ( SQLException  e) {
+        
+        out.println("" +e);
+        
     }
 %>
 <html>
@@ -36,7 +38,7 @@
         </style>
         <title>Hoteles</title>
     </head>
-    
+  
     <body>
 
         <h1 align="center">Cadena hotelera</h1><br>

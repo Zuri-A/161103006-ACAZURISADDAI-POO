@@ -1,4 +1,4 @@
-package com.Javadb.resources;
+package com.Javadb1bus.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
