@@ -19,7 +19,7 @@
 %>
 <html>
     <head>
-        <style>
+         <!-- <style>
             table {
                 font-family: arial, sans-serif;
                 border-collapse: collapse;
@@ -35,7 +35,7 @@
             tr:nth-child(even) {
                 background-color: #e6e6ff;
             }
-        </style>
+        </style>-->
         <title>Hoteles</title>
     </head>
   
@@ -43,7 +43,7 @@
 
         <h1 align="center">Cadena hotelera</h1><br>
         <h1 align="center">CENTENAR</h1><br>
-
+        
         <table style="margin: 0 auto;">
             <caption><h3>Registro de hoteles</h3></caption>
             <tr>
@@ -85,6 +85,7 @@
             <%}%>  
             
         </table>
+        </style>
         
     </body>
 </html>
