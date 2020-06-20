@@ -41,9 +41,12 @@
                 <tbody>
                     <% while (rs.next()) {%>
                     <tr>
-                        <th><%=rs.getInt("id_usuario")%></th>
+                        <th><%=rs.getInt("Id_usuario")%></th>
                         <td><%=rs.getString("usuario")%></td>
                         <td><%=rs.getString("password")%></td>
+                        <td><a class="btn btn-success btn-block" href="FormularioUsuario.jsp?id=<%=rs.getInt("Id_usuario")%>">Modificar</a></td>
+                        <td><a class="btn btn-success btn-block" href="EliminarUsuario.jsp?id=<%=rs.getInt("Id_usuario")%>"">Eliminar</a></td>
+                        
                     </tr>
                     <% }%>
                 </tbody>
