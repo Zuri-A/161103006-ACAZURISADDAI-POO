@@ -1,18 +1,15 @@
-<%@page import="java.sql.*"%>
+<%@page import="java.util.List"%>
+<%@page import="crud.UsuarioBD"%>
+<%@page import="crud.Usuario"%>
+<%@page  import="java.util.ArrayList" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 
 <%
-    Connection conexion = null;
-    PreparedStatement stmt = null;
-    ResultSet rs = null;
+    List<Usuario> usuarios = new UsuarioBD().listadoUsuarios();
 
-    try {
-        Class.forName("com.mysql.jdbc.Driver");
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost/usuarios", "root", "");
-        stmt = conexion.prepareStatement("Select * from usuario");
-        rs = stmt.executeQuery();
+           
 %>
 <html>
     <head>
@@ -39,29 +36,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% while (rs.next()) {%>
+                    <%for (Usuario usuario : usuarios) {%>
                     <tr>
-                        <th><%=rs.getInt("Id_usuario")%></th>
-                        <td><%=rs.getString("usuario")%></td>
-                        <td><%=rs.getString("password")%></td>
-                        <td><a class="btn btn-success btn-block" href="FormularioUsuario.jsp?id=<%=rs.getInt("Id_usuario")%>">Modificar</a></td>
-                        <td><a class="btn btn-success btn-block" href="EliminarUsuario.jsp?id=<%=rs.getInt("Id_usuario")%>"">Eliminar</a></td>
-                        
+                        <th><%=usuario.getId_usuario()%></th>
+                        <td><%=usuario.getUsuario()%></td>
+                        <td><%=usuario.getPassword()%></td>
+                        <td><a class="btn btn-success btn-block" href="FormularioUsuario.jsp?id=<%=usuario.getId_usuario()%>">Editar usuario</a></td>
+                        <td><a class="btn btn-success btn-block" href="EliminarUsuario.jsp?id=<%=usuario.getId_usuario()%>">Eliminar</a></td>
+                        <td><a class="btn btn-success btn-block" href="ContraUsuario.jsp?id=<%=usuario.getId_usuario()%>">Editar contraseña</a></td>
+                        <td><a class="btn btn-success btn-block" href="ER.jsp?id=<%=usuario.getId_usuario()%>">EliminarV2</a></td>
+
                     </tr>
-                    <% }%>
+                    <%}%>
                 </tbody>
             </table>
         </div>
     </body>
 </html>
-<%
-    } catch (SQLSyntaxErrorException e) {
-        switch (e.getErrorCode()) {
-            case 1049:
-                out.println("<b> Error SQL: </b> Error en la conexion");
-                break;
-            case 1146:
-                out.println("<b> Error SQL: </b> La tabla no existe");
-                break;
-        }
-    }%>

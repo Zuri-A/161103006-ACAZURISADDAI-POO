@@ -1,2 +1,3 @@
-com\Javadb1\resources\JavaEE8Resource.class
-com\Javadb1\JAXRSConfiguration.class
+Config\Conexion.class
+crud\Usuario.class
+crud\UsuarioBD.class
